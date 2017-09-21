@@ -7,7 +7,12 @@
     "id": "org.nativescript.travistest"
   },
   "scripts": {
-    "lint": "tslint \"app/**/*.ts\""
+    "lint": "tslint \"app/**/*.ts\"",
+    "ns-bundle": "ns-bundle",
+    "build-ios-bundle": "npm run ns-bundle --ios --build-app --uglify",
+    "build-android-bundle": "npm run ns-bundle --android --build-app --uglify --snapshot",
+    "build-ios": "tns build ios",
+    "build-android": "tns build android"
   },
   "dependencies": {
     "@angular/animations": "4.2.5",
